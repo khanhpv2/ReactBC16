@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+// Component app sẽ là nơi chưa toàn bộ giao diện của ứng dụng
+import CardJSX from "./Component/DemoComponent/CardJSX";
+import CardFunc from "./Component/DemoComponent/CardFunc";
+import BaiTapLayout from "./Component/DemoComponent/BaiTapLayout/BaiTapLayout";
+import Databinding from "./Databinding/Databinding";
+import HandleEvent from "./HandleEvent/HandleEvent";
+import StateDemo from "./StateDemo/StateDemo";
+import RenderWithMap from "./RenderWithMap/RenderWithMap";
+import DemoProps from "./Props/DemoProps/DemoProps";
+import ProductList from "./ShoesShop/ProductList";
+import DemoXemChiTiet from "./Props/DemoProps/DemoXemChiTiet/DemoXemChiTiet";
+import BTGiohang from "./DemoRedux/BTGiohang/BTGiohang";
+import BtGameXucXac from "./DemoRedux/BTGiohang/BTGameXucXac/BtGameXucXac";
 
+// cấu hình router
+import { BrowserRouter, Route } from "react-router-dom";
+import Login from "./pages/Login/Login";
+import Home from "./pages/Home/Home";
+import Register from "./pages/Register/Register";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
+import { Switch } from "react-router-dom";
+import HeaderHome from "./Component/HeaderHome/HeaderHome";
+import Profile from "./pages/Profile/Profile";
+import Detail from "./pages/Detail/Detail";
+import BaiTapFormDangKy from "./pages/BaiTapFormDangKy/BaiTapFormDangKy";
+import LifeCycle from "./pages/LifeCycle/LifeCycle";
+import DemoUseState from "./pages/Hooks/DemoUseState/DemoUseState";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <HeaderHome />
+      <Switch>
+        <Route exact path={"/home"} component={Home} />
+        <Route exact path={"/login"} component={Login} />
+        <Route exact path={"/register"} component={Register} />
+        <Route exact path={"/about"} component={About} />
+        <Route exact path={"/contact"} component={Contact} />
+        <Route exact path={"/profile"} component={Profile} />
+        <Route exact path={"/detail/:postid"} component={Detail} />
+        <Route exact path={"/baitapform"} component={BaiTapFormDangKy} />
+        <Route exact path={"/lifecycle"} component={LifeCycle}/>
+        <Route exact path={"/usestate"} component={DemoUseState}/>
+
+        {/* trang mặc định luôn đặt ở cuối cùng */}
+        <Route exact path={"/"} component={Home} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

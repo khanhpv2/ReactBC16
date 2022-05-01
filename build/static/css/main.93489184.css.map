@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.93489184.css","mappings":"AAAA,mBACI,UAAa,CACb,eACJ,CCHA,8BACI,YACJ","sources":["assets/style/style.css","StateDemo/StateDemo.module.css"],"sourcesContent":[".text-color-yellow {\r\n    color: yellow;\r\n    font-weight:bold;\r\n}",".text-orange {\r\n    color: orange;\r\n}"],"names":[],"sourceRoot":""}

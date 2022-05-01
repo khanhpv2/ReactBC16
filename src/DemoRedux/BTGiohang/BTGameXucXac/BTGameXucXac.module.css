@@ -1,0 +1,13 @@
+/* code css tách file thì các link đường dẫn đi theo tương đối (không đi như public trong html */
+
+@font-face {
+    font-family:fontGame ;
+    src: url(../../../assets/fonts/Pony.ttf);
+}
+
+.game-xuc-xac {
+    background-image: url(../../../assets/img/bgGame.png);
+    width: 100vw;
+    height: 100vh;
+    font-family: fontGame;
+}
