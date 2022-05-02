@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import BaiTapChonXeRFC from './BaiTapChonXeRFC';
 
 export default function DemoUseState(props) { // thay vì this.props thì rfc có param là props
   const [stateNumber,setStateNumber] = useState(1); //useState(stateDefault)
@@ -26,6 +27,9 @@ export default function DemoUseState(props) { // thay vì this.props thì rfc c�
                 }}>Random</button>
             </div>
         </div>
+        <hr />
+        <h3>Bài tập chọn xe</h3>
+        <BaiTapChonXeRFC />
     </div>
   )
 }

@@ -49,6 +49,8 @@ export default class HeaderHome extends Component {
                 React Form
               </NavLink>
             </li>
+
+           
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -66,6 +68,32 @@ export default class HeaderHome extends Component {
                 </NavLink>
                 <NavLink className="dropdown-item" to="/usestate">
                   Use state
+                </NavLink>
+                <NavLink className="dropdown-item" to="/useeffect">
+                  Use Effect
+                </NavLink>
+                <NavLink className="dropdown-item" to="/usecallback">
+                  Use Callback
+                </NavLink>
+              </div>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownId"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Api
+              </a>
+              <div className="dropdown-menu" aria-labelledby="dropdownId">
+                <NavLink className="dropdown-item" to="/apircc">
+                  Demo Api react classs
+                </NavLink>
+                <NavLink className="dropdown-item" to="/apirfc">
+                  Demo Api react funtion
                 </NavLink>
               </div>
             </li>
