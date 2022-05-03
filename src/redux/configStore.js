@@ -1,6 +1,8 @@
 import {combineReducers, createStore} from 'redux' ;
+import { fakeBookAppReducer } from './reducers/fakeBookAppReducer';
 import { formDangKyReducer } from './reducers/formDangKyReducer';
 import { gioHangReducer } from './reducers/gioHangreducer';
+import { arrTaskReducer } from './reducers/todoAppReducer';
 import {XucXacReducer} from './reducers/xucxacReducer'
 
 
@@ -10,7 +12,10 @@ const rootReducer = combineReducers ({
     gioHangState:gioHangReducer, 
     // nhiều state
     XucXacReducer:XucXacReducer,
-    formDangKyReducer:formDangKyReducer
+    formDangKyReducer:formDangKyReducer,
+    fakeBookAppReducer:fakeBookAppReducer,
+    arrTaskReducer:arrTaskReducer
+    
 
 })
 
