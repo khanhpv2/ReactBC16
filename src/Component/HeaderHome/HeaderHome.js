@@ -49,6 +49,11 @@ export default class HeaderHome extends Component {
                 React Form
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink activeClassName="font-weight-bold bg-white text-dark" className="nav-link" to="/hoc">
+                Demo HOC
+              </NavLink>
+            </li>
 
            
             <li className="nav-item dropdown">

@@ -36,11 +36,14 @@ import DemoUseMemo from "./pages/Hooks/DemoUseMemo/DemoUseMemo";
 import DemoUseRef from "./pages/Hooks/DemoUseRef/DemoUseRef";
 import FakeBookApp from "./pages/Hooks/HookRedux/FakeBookApp";
 import ReduxApi from "./pages/ReduxApi/ReduxApi";
+import DemoHOC from "./pages/HOC/DemoHOC";
+import ModalHOC from "./pages/HOC/ModalHOC";
 
 function App() {
   return (
     <BrowserRouter>
       <HeaderHome />
+      <ModalHOC />
       <Switch>
         <Route exact path={"/home"} component={Home} />
         <Route exact path={"/login"} component={Login} />
@@ -60,10 +63,12 @@ function App() {
         <Route exact path={"/useref"} component={DemoUseRef}/>
         <Route exact path={"/useredux"} component={FakeBookApp}/>
         <Route exact path={"/reduxapi"} component={ReduxApi}/>
+        <Route exact path={"/hoc"} component={DemoHOC}/>
 
         {/* trang mặc định luôn đặt ở cuối cùng */}
         <Route exact path={"/"} component={Home} />
       </Switch>
+    
     </BrowserRouter>
   );
 }
