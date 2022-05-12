@@ -38,18 +38,29 @@ import FakeBookApp from "./pages/Hooks/HookRedux/FakeBookApp";
 import ReduxApi from "./pages/ReduxApi/ReduxApi";
 import DemoHOC from "./pages/HOC/DemoHOC";
 import ModalHOC from "./pages/HOC/ModalHOC";
+import AntD from "./pages/AntD/AntD";
+import HomeTemplate from "./template/HomeTemplate/HomeTemplate";
+import UserTemplate from "./template/UserTemplate/UserTemplate";
+import AdminTemplate from "./template/AdminTemplate/AdminTemplate";
 
 function App() {
   return (
     <BrowserRouter>
-      <HeaderHome />
+      {/* <HeaderHome /> */}
       <ModalHOC />
       <Switch>
-        <Route exact path={"/home"} component={Home} />
-        <Route exact path={"/login"} component={Login} />
+        {/* <Route exact path={"/home"} render={(propsRoute)=>{ //propsRoute: history, location, match, ...
+            return <div>
+              <HeaderHome />
+              <Home {...propsRoute} />
+            </div>
+        }} /> */}
+        <AdminTemplate path='/admin/home' component={Home} />
+        <HomeTemplate path='/home' component={Home} />
+        <UserTemplate exact path={"/login"} component={Login} />
         <Route exact path={"/register"} component={Register} />
-        <Route exact path={"/about"} component={About} />
-        <Route exact path={"/contact"} component={Contact} />
+        <HomeTemplate exact path={"/about"} component={About}  />
+        <HomeTemplate exact path={"/contact"} component={Contact} />
         <Route exact path={"/profile"} component={Profile} />
         <Route exact path={"/detail/:postid"} component={Detail} />
         <Route exact path={"/baitapform"} component={BaiTapFormDangKy} />
@@ -64,6 +75,7 @@ function App() {
         <Route exact path={"/useredux"} component={FakeBookApp}/>
         <Route exact path={"/reduxapi"} component={ReduxApi}/>
         <Route exact path={"/hoc"} component={DemoHOC}/>
+        <Route exact path={"/antd"} component={AntD}/>
 
         {/* trang mặc định luôn đặt ở cuối cùng */}
         <Route exact path={"/"} component={Home} />

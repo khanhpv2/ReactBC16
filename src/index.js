@@ -7,6 +7,9 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 import {store} from './redux/configStore'
 // import { createStore } from 'redux';
+// cau hinh ant design
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+
 
 // const store = createStore(rootReducer)
 ReactDOM.render(
