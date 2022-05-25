@@ -23,6 +23,7 @@ export default function (props) {
             Add rows here
           </div> */}
           {/* {props.component} */}
+          {component}
           
         </div>
         <div className="modal-footer">

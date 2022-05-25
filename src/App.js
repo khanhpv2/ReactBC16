@@ -42,6 +42,7 @@ import AntD from "./pages/AntD/AntD";
 import HomeTemplate from "./template/HomeTemplate/HomeTemplate";
 import UserTemplate from "./template/UserTemplate/UserTemplate";
 import AdminTemplate from "./template/AdminTemplate/AdminTemplate";
+import HomeMobile from "./pages/Home/HomeMobile";
 
 function App() {
   return (
@@ -56,29 +57,29 @@ function App() {
             </div>
         }} /> */}
         <AdminTemplate path='/admin/home' component={Home} />
-        <HomeTemplate path='/home' component={Home} />
+        <HomeTemplate path='/home' component={Home} componentMobile={HomeMobile} />
         <UserTemplate exact path={"/login"} component={Login} />
-        <Route exact path={"/register"} component={Register} />
+        <UserTemplate exact path={"/register"} component={Register} />
         <HomeTemplate exact path={"/about"} component={About}  />
         <HomeTemplate exact path={"/contact"} component={Contact} />
-        <Route exact path={"/profile"} component={Profile} />
-        <Route exact path={"/detail/:postid"} component={Detail} />
-        <Route exact path={"/baitapform"} component={BaiTapFormDangKy} />
-        <Route exact path={"/lifecycle"} component={LifeCycle}/>
-        <Route exact path={"/usestate"} component={DemoUseState}/>
-        <Route exact path={"/useeffect"} component={DemoUseEffect}/>
-        <Route exact path={"/apircc"} component={ApiRcc}/>
-        <Route exact path={"/apirfc"} component={ApiRfc}/>
-        <Route exact path={"/usecallback"} component={DemoUseCallBack}/>
-        <Route exact path={"/usememo"} component={DemoUseMemo}/>
-        <Route exact path={"/useref"} component={DemoUseRef}/>
-        <Route exact path={"/useredux"} component={FakeBookApp}/>
-        <Route exact path={"/reduxapi"} component={ReduxApi}/>
-        <Route exact path={"/hoc"} component={DemoHOC}/>
-        <Route exact path={"/antd"} component={AntD}/>
+        <HomeTemplate exact path={"/profile"} component={Profile} />
+        <HomeTemplate exact path={"/detail/:postid"} component={Detail} />
+        <HomeTemplate exact path={"/baitapform"} component={BaiTapFormDangKy} />
+        <HomeTemplate exact path={"/lifecycle"} component={LifeCycle}/>
+        <HomeTemplate exact path={"/usestate"} component={DemoUseState}/>
+        <HomeTemplate exact path={"/useeffect"} component={DemoUseEffect}/>
+        <HomeTemplate exact path={"/apircc"} component={ApiRcc}/>
+        <HomeTemplate exact path={"/apirfc"} component={ApiRfc}/>
+        <HomeTemplate exact path={"/usecallback"} component={DemoUseCallBack}/>
+        <HomeTemplate exact path={"/usememo"} component={DemoUseMemo}/>
+        <HomeTemplate exact path={"/useref"} component={DemoUseRef}/>
+        <HomeTemplate exact path={"/useredux"} component={FakeBookApp}/>
+        <HomeTemplate exact path={"/reduxapi"} component={ReduxApi}/>
+        <HomeTemplate exact path={"/hoc"} component={DemoHOC}/>
+        <HomeTemplate exact path={"/antd"} component={AntD}/>
 
         {/* trang mặc định luôn đặt ở cuối cùng */}
-        <Route exact path={"/"} component={Home} />
+        <HomeTemplate exact path={"/"} component={Home} />
       </Switch>
     
     </BrowserRouter>
